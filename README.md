@@ -4,4 +4,4 @@
 
 Note: Some resources in this project are taken from the Internet, do not use them in your commercial project
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/UCBUXiYqkFy0g6V0mVH1kESw/0.jpg)](https://www.youtube.com/watch?v=UCBUXiYqkFy0g6V0mVH1kESw)
