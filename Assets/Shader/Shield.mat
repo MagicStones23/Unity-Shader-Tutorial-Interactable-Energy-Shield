@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shield
+  m_Shader: {fileID: 4800000, guid: a5cc55367fbacd340b919de4bf8b16a1, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3010
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DistortNormal:
+        m_Texture: {fileID: 2800000, guid: cf29c34878313cd4980bea3b14aaed24, type: 3}
+        m_Scale: {x: 8, y: 8}
+        m_Offset: {x: 0.2, y: 0.2}
+    - _LineTex:
+        m_Texture: {fileID: 2800000, guid: 925736c8a9767fb4eb2c6b1005fab75a, type: 3}
+        m_Scale: {x: 1, y: 0.5}
+        m_Offset: {x: 0, y: -0.8}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 4, y: 4}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 2800000, guid: c8b955a27f3d25540bae909f9d6455e8, type: 3}
+        m_Scale: {x: 0.9, y: 1.1}
+        m_Offset: {x: 0.03, y: -0.025}
+    - _Noise:
+        m_Texture: {fileID: 2800000, guid: 7b0545feb34418a47822f621839d6844, type: 3}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: 0.2, y: 0.2}
+    - _PatternTex:
+        m_Texture: {fileID: 8900000, guid: 56da47a57b71b6a4082f29501ae03f9a, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _CullMode: 0
+    - _DissolveThreshold: 1
+    - _DissolveWidth: 0.1
+    - _DistortIntensity: 0.03
+    - _DstBlend: 10
+    - _InteractionInnerRadius: 0.5
+    - _InteractionOuterRadius: 1
+    - _IntersectionWidth: 2
+    - _MaskIntensity: 3
+    - _PatternIntensity: 4
+    - _PatternPower: 2.5
+    - _RimPower: 2.75
+    - _SrcBlend: 5
+    - _TestInnerRadius: 1
+    - _TestInteractionInnerRadius: 0.75
+    - _TestInteractionOuterRadius: 1.5
+    - _TestOuterRadius: 2
+    - _ZTestMode: 4
+    - _ZWriteMode: 0
+    m_Colors:
+    - _BaseColor: {r: 0, g: 0.03780453, b: 0.3679245, a: 0.08627451}
+    - _DissolveColor: {r: 4.538753, g: 0.7862603, b: 6.4980197, a: 1}
+    - _InteractionColor: {r: 1.8281692, g: 1.1094339, b: 4, a: 1}
+    - _IntersectionColor: {r: 0, g: 0.6310158, b: 1, a: 1}
+    - _LineColor: {r: 0, g: 0, b: 0, a: 0}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MaskColor: {r: 95.87451, g: 15.058824, b: 26.101961, a: 1}
+    - _PatternColor: {r: 32.65444, g: 0, b: 135.58699, a: 1}
+    - _RimColor: {r: 0.65882355, g: 2.0862746, b: 2.9960785, a: 1}
+    - _TestInteractionColor: {r: 3.4415908, g: 0.9730152, b: 0, a: 1}
+    - _TestInteractionPos: {r: 0, g: 2.02, b: -2.48, a: 0}
+    - _TestPos: {r: 0, g: 0, b: -3.5, a: 0}
+  m_BuildTextureStacks: []
