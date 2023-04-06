@@ -1,3 +1,17 @@
+# This project is create in Unity2022.2.12
+
+# How to use this project
+
+### Click shield to interact
+### Press C to hide shield
+### Press O to show shield
+
+https://user-images.githubusercontent.com/129722386/230351712-7e56f680-b0ba-47a8-b648-4ccbcc93c064.mp4
+
+
+
+# Unity Shader Tutorial, Interactable Energy Shield
+
 # Demonstration
 
 https://user-images.githubusercontent.com/129722386/229703054-6ec0d660-cd0c-4f8c-8e60-4735e44672d0.mp4
@@ -406,12 +420,8 @@ https://github.com/MagicStones23/Unity-Shader-Tutorial-Interactable-Energy-Shiel
 
 ### Note: Some resources in this project are taken from the Internet, do not use them in your commercial project
 
-
-# My YouTube Channel
-
-https://www.youtube.com/channel/UCBUXiYqkFy0g6V0mVH1kESw
-
-
 # My Social Media
 
 https://twitter.com/MagicStone23
+
+https://www.youtube.com/channel/UCBUXiYqkFy0g6V0mVH1kESw
