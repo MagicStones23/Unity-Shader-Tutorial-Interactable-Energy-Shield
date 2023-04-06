@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShieldManager : MonoBehaviour {
+public class DissolveManager : MonoBehaviour {
     public float duration = 1f;
     public Material material;
     public AnimationCurve curve;

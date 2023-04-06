@@ -150,7 +150,7 @@
                 }
                 ndv = 1 - ndv;
 
-                float rimIntensity = pow(ndv, _RimPower);
+                float rimIntensity = pow(abs(ndv), _RimPower);
                 finalColor += _RimColor * rimIntensity;
                 finalColor.a = saturate(finalColor.a);
 
@@ -187,7 +187,7 @@
 
 
                 float patternIntensity = texCUBE(_PatternTex, normal + distortNormal).a * isFrontFace;
-                patternIntensity *= pow(ndv + interactionIntensity * 2, _PatternPower);
+                patternIntensity *= pow(abs(ndv + interactionIntensity * 2), _PatternPower);
                 finalColor += patternIntensity * _PatternColor;
                 finalColor.a = saturate(finalColor.a);
 
@@ -234,7 +234,7 @@
                 }
                 else if(i.localPos.y > _DissolveThreshold - _DissolveWidth) {
                     float t = (i.localPos.y - _DissolveThreshold + _DissolveWidth) / _DissolveWidth;
-                    float noise = tex2D(_Noise, i.uv * _Noise_ST.xy + _Noise_ST.zw * _Time.y);
+                    float noise = tex2D(_Noise, i.uv * _Noise_ST.xy + _Noise_ST.zw * _Time.y).r;
                     noise = lerp(1, noise * (1 - t), pow(t, 0.5));
                     if(noise > 0.5) {
                         finalColor = _DissolveColor;
