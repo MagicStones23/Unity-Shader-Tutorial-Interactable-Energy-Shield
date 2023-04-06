@@ -1,6 +1,6 @@
 # This project is create in Unity2022.2.12
 
-# How to use this project
+# How to use
 
 ### Click shield to interact
 ### Press C to hide shield
