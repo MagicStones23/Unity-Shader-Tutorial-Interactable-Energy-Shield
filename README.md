@@ -1,10 +1,32 @@
+# This project is create in Unity2022.2
+
+# How to use
+
+### Click shield to interact
+### Press C to hide shield
+### Press O to show shield
+
+
+
+
+https://user-images.githubusercontent.com/129722386/230711633-63775944-1afd-4299-b677-65857372ddb4.mp4
+
+
+
+<br/><br/>
+<br/><br/>
+
+
+
+# Unity Shader Tutorial, Interactable Energy Shield
+
 # Demonstration
 
 https://user-images.githubusercontent.com/129722386/229703054-6ec0d660-cd0c-4f8c-8e60-4735e44672d0.mp4
 
 # Setup URP Project
 
-### Create a new project and switch to Universal RP. I am using Unity2022.2, other versions are also OK
+### Create a new project and switch to Universal RP. I am using Unity2022.2
 
 ![0新建工程](https://user-images.githubusercontent.com/129722386/229703456-d031eaec-0684-42f7-96b6-548322403d0b.png)
 
@@ -404,14 +426,14 @@ https://user-images.githubusercontent.com/129722386/229704178-2f85ea83-99d5-4c9b
 
 https://github.com/MagicStones23/Unity-Shader-Tutorial-Interactable-Energy-Shield
 
-### Note: Some resources in this project are taken from the Internet, do not use them in your commercial project
-
-
-# My YouTube Channel
-
-https://www.youtube.com/channel/UCBUXiYqkFy0g6V0mVH1kESw
-
+### Note: Some resources in this project are taken from Internet, do not use them in your commercial project
 
 # My Social Media
 
 https://twitter.com/MagicStone23
+
+https://www.youtube.com/channel/UCBUXiYqkFy0g6V0mVH1kESw
+
+https://www.zhihu.com/people/shui-guai-76-84
+
+https://space.bilibili.com/423191063?spm_id_from=333.1007.0.0
