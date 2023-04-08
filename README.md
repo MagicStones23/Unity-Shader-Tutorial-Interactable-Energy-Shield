@@ -26,7 +26,7 @@ https://user-images.githubusercontent.com/129722386/229703054-6ec0d660-cd0c-4f8c
 
 # Setup URP Project
 
-### Create a new project and switch to Universal RP. I am using Unity2022.2, other versions are also OK
+### Create a new project and switch to Universal RP. I am using Unity2022.2
 
 ![0新建工程](https://user-images.githubusercontent.com/129722386/229703456-d031eaec-0684-42f7-96b6-548322403d0b.png)
 
