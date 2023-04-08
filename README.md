@@ -426,10 +426,14 @@ https://user-images.githubusercontent.com/129722386/229704178-2f85ea83-99d5-4c9b
 
 https://github.com/MagicStones23/Unity-Shader-Tutorial-Interactable-Energy-Shield
 
-### Note: Some resources in this project are taken from the Internet, do not use them in your commercial project
+### Note: Some resources in this project are taken from Internet, do not use them in your commercial project
 
 # My Social Media
 
 https://twitter.com/MagicStone23
 
 https://www.youtube.com/channel/UCBUXiYqkFy0g6V0mVH1kESw
+
+https://www.zhihu.com/people/shui-guai-76-84
+
+https://space.bilibili.com/423191063?spm_id_from=333.1007.0.0
