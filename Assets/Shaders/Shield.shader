@@ -105,6 +105,7 @@
                 }
                 else {
                     float intensity = (dist - innerRadius) / (outerRadius - innerRadius);
+                    intensity = saturate(intensity);
                     return intensity;
                 }
             }
@@ -116,6 +117,7 @@
                 }
                 else {
                     float intensity = dist / outerRadius;
+                    intensity = saturate(intensity);
                     return intensity;
                 }
             }

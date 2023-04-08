@@ -58,6 +58,10 @@
                 }
                 else {
                     float intensity = dist / outerRadius;
+                    intensity *= 2;
+                    if(intensity > 1) {
+                        intensity = 2 - intensity;
+                    }
                     return intensity;
                 }
             }
@@ -81,8 +85,8 @@
 
                 float distortIntensity = 0;
                 for(int iii = 0; iii < _InteractionNumber; iii++) {
-                    distortIntensity += GetDistortIntensity(i, _InteractionStartPosArray[iii], _InteractionInnerRadiusArray[iii], _InteractionOuterRadiusArray[iii]) * _DistortAlphaArray[iii];
-                    distortIntensity = saturate(distortIntensity) * 4;
+                    distortIntensity += GetDistortIntensity(i, _InteractionStartPosArray[iii], _InteractionInnerRadiusArray[iii], _InteractionOuterRadiusArray[iii]) * _DistortAlphaArray[iii] * 6;
+                    distortIntensity = saturate(distortIntensity);
                 }
 
                 float3 distortNormal = UnpackNormal(tex2D(_DistortNormal, i.uv * _DistortNormal_ST.xy + _DistortNormal_ST.zw * _Time.y));
