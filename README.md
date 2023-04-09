@@ -225,7 +225,7 @@ else if(i.localPos.y > _DissolveThreshold - _DissolveWidth) {
    if(noise > 0.5) {
        finalColor = _DissolveColor;
    }else {
-    discard;
+       discard;
    }
 }
 ```
@@ -373,6 +373,8 @@ for(int iii = 0; iii < _InteractionNumber; iii++) {
 
 float patternIntensity = texCUBE(_PatternTex, normal + distortNormal).a * isFrontFace;
 patternIntensity *= pow(ndv + interactionIntensity, _PatternPower);
+finalColor += patternIntensity * _PatternColor;
+finalColor.a = saturate(finalColor.a);
 ```
 https://user-images.githubusercontent.com/129722386/229704120-44c0f44c-1238-422a-a8af-3f5d4945dd58.mp4
 
