@@ -104,7 +104,7 @@ finalColor.a = saturate(finalColor.a);
 
 ![4边缘光](https://user-images.githubusercontent.com/129722386/229703624-2b7bd5e3-a64c-4c14-a085-ca472fab7c27.png)
 
-### Something seems to be missing, oh, forgot to add Bloom...
+### Something seems to be missing, oh, forgot to add Bloom
 
 ![5Bloom](https://user-images.githubusercontent.com/129722386/229703655-8af354f9-d0c9-490f-93d0-6a43145c4dd8.png)
 
