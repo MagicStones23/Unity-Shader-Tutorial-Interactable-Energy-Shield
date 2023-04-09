@@ -40,7 +40,7 @@ https://user-images.githubusercontent.com/129722386/229703054-6ec0d660-cd0c-4f8c
 
 ![2新建Shader](https://user-images.githubusercontent.com/129722386/229703554-cb923e80-a693-4899-ac8a-d7b75a0c62bd.png)
 
-### Output UV, normal and other informations from vertex shader for later use
+### Add uv, normal and other informations for later use
 
 ```csharp
 struct appdata
@@ -72,7 +72,7 @@ v2f vert (appdata v)
    #if UNITY_UV_STARTS_AT_TOP
     o.screenPos.y *= -1;
    #endif
-    return o;
+   return o;
 }
 ```
 
@@ -104,7 +104,7 @@ finalColor.a = saturate(finalColor.a);
 
 ![4边缘光](https://user-images.githubusercontent.com/129722386/229703624-2b7bd5e3-a64c-4c14-a085-ca472fab7c27.png)
 
-### Seems to be missing something, oh, forgot to add Bloom...
+### Something seems to be missing, oh, forgot to add Bloom...
 
 ![5Bloom](https://user-images.githubusercontent.com/129722386/229703655-8af354f9-d0c9-490f-93d0-6a43145c4dd8.png)
 
@@ -143,7 +143,7 @@ if(zDifference < _IntersectionWidth) {
 ![6高亮](https://user-images.githubusercontent.com/129722386/229703689-1e56287a-e86b-4a6c-8f72-eaf752c85c8b.png)
 
 # Texture
-### Next, add texture to energy shield, sphere's UV is uneven, if sample texture directly with UV, texture will be compressed at the top area and stretched in the middle area.
+### Next, add texture to energy shield, sphere's UV is uneven, if sample texture directly with UV, texture will be compressed at top area and stretched in  middle area.
 
 ### Here I transfer 2d texture into a cubemap, sample it with normal vector. And check if pixel is on backface, if it is, no need to show texture
 
@@ -197,7 +197,7 @@ finalColor.a = saturate(finalColor.a);
 https://user-images.githubusercontent.com/129722386/229703904-e705d9f0-7bba-4800-8dce-394141ea8816.mp4
 
 # Dissolve
-### Next, make dissolve effect of starting energy shield, use pixel's  y coordinate to control dissolve, and then add a noise texture to make irregular contour
+### Next, add dissolve effect for shield startup, use pixel's  y coordinate to control dissolve, and add a noise texture to make irregular contour
 
 ```csharp
 //Properties
@@ -233,9 +233,9 @@ else if(i.localPos.y > _DissolveThreshold - _DissolveWidth) {
 https://user-images.githubusercontent.com/129722386/229703986-38a7ffae-b367-47a6-8a7e-b14dc6ff6540.mp4
 
 # Interaction
-### Next, make the most complex interaction function. The idea is to use C# script to pass interaction point, interaction radius and interaction color to material. Then in shader, calculate the distance between pixel and interaction point, display interaction color if pixel is within interaction radius.
+### Next, make the most complex interaction function. Use C# script to pass interaction data(position, radius, color) to material. Then in shader, calculate the distance between pixel and interaction position, display interaction color if pixel is within interaction radius.
 
-### Create a new script called Shield.cs, which contains APIs that passes interaction information
+### Create a new script called Shield.cs, which contains APIs that pass informations to material
 
 ```csharp
 public class Shield : MonoBehaviour {
@@ -278,7 +278,7 @@ public class Shield : MonoBehaviour {
 }
 ```
 
-### Create a new script called ShootManager.cs that performs ray detection when clicking mouse button and call interaction interface if it collides with energy shield
+### Create a new script called ShootManager.cs, which performs ray detection when clicking mouse button and call interaction API if ray collides with energy shield
 
 ```csharp
 public class ShootManager : MonoBehaviour {
@@ -338,7 +338,7 @@ finalColor.a = saturate(finalColor.a);
 
 https://user-images.githubusercontent.com/129722386/229704069-78d6acb8-a068-49b1-965f-7fe174dabb49.mp4
 
-### In interactive area, lighten and distort the main texture
+### In interaction area, lighten and distort the main texture
 
 ```csharp
 //Properties
@@ -376,11 +376,11 @@ patternIntensity *= pow(ndv + interactionIntensity, _PatternPower);
 ```
 https://user-images.githubusercontent.com/129722386/229704120-44c0f44c-1238-422a-a8af-3f5d4945dd58.mp4
 
-### Interactive function is one step away!
+### Interaction function is one step away!
 
-### Next, add screen distortion, the idea is to change the screen UV with a normal map, and then sample _CameraOpaqueTexture
+### Next, add screen distortion, the idea is to change screen UV with a normal map, then sample _CameraOpaqueTexture
 
-### Create a new shader called Shield_Distort.shader, copy the code from shield shader and add
+### Create a new shader called Shield_Distort.shader, copy all code from shield shader and add
 
 ```csharp
 sampler2D _CameraOpaqueTexture;
@@ -426,14 +426,14 @@ https://user-images.githubusercontent.com/129722386/229704178-2f85ea83-99d5-4c9b
 
 https://github.com/MagicStones23/Unity-Shader-Tutorial-Interactable-Energy-Shield
 
-### Note: Some resources in this project are taken from Internet, do not use them in your commercial project
+### Note: Some of the texture resources in this project are taken from Internet, do not use them in your commercial project
 
 # My Social Media
 
-https://twitter.com/MagicStone23
+Twitter : https://twitter.com/MagicStone23
 
-https://www.youtube.com/channel/UCBUXiYqkFy0g6V0mVH1kESw
+Youtube : https://www.youtube.com/channel/UCBUXiYqkFy0g6V0mVH1kESw
 
-https://www.zhihu.com/people/shui-guai-76-84
+zhihu : https://www.zhihu.com/people/shui-guai-76-84
 
-https://space.bilibili.com/423191063?spm_id_from=333.1007.0.0
+Bilibili : https://space.bilibili.com/423191063?spm_id_from=333.1007.0.0
