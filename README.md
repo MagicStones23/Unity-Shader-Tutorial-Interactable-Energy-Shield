@@ -426,7 +426,7 @@ https://user-images.githubusercontent.com/129722386/229704178-2f85ea83-99d5-4c9b
 
 https://github.com/MagicStones23/Unity-Shader-Tutorial-Interactable-Energy-Shield
 
-### Note: Some resources in this project are taken from Internet, do not use them in your commercial project
+### Note: Some of the texture resources in this project are taken from Internet, do not use them in your commercial project
 
 # My Social Media
 
