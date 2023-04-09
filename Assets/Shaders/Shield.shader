@@ -48,16 +48,19 @@
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
                 float3 normal : NORMAL;
+                float4 tangent : TANGENT;
             };
 
             struct v2f
             {
                 float4 vertex : SV_POSITION;
-                float2 uv : TEXCOORD1;
-                float3 normal : TEXCOORD2;
-                float3 worldPos : TEXCOORD3;
-                float4 screenPos : TEXCOORD4;
-                float4 localPos : TEXCOORD5;
+                float2 uv : TEXCOORD0;
+                float3 normal : TEXCOORD1;
+                float3 tangent : TEXCOORD2;
+                float3 binormal : TEXCOORD3;
+                float3 worldPos : TEXCOORD4;
+                float4 screenPos : TEXCOORD5;
+                float4 localPos : TEXCOORD6;
             };
 
             float4 _BaseColor;
@@ -125,9 +128,12 @@
             v2f vert (appdata v)
             {
                 v2f o;
+                o.tangent = TransformObjectToWorldDir(v.tangent.xyz);
+                o.normal = TransformObjectToWorldNormal(v.normal.xyz);
+                o.binormal = cross(o.tangent, o.normal) * v.tangent.w;
+
                 o.vertex = TransformObjectToHClip(v.vertex.xyz);
                 o.uv = v.uv;
-                o.normal = TransformObjectToWorldNormal(v.normal);
                 o.worldPos = TransformObjectToWorld(v.vertex.xyz);
                 o.localPos = v.vertex;
                 o.screenPos = o.vertex;
@@ -182,8 +188,16 @@
 
 
 
+                float3x3 tangentToWorld = float3x3(
+                    i.tangent.x, i.normal.x, i.binormal.x,
+                    i.tangent.y, i.normal.y, i.binormal.y,
+                    i.tangent.z, i.normal.z, i.binormal.z
+                );
+
                 float3 distortNormal = UnpackNormal(tex2D(_DistortNormal, i.uv * _DistortNormal_ST.xy + _DistortNormal_ST.zw * _Time.y));
-                distortNormal *= _DistortIntensity * distortIntensity * 2;
+                distortNormal = mul(tangentToWorld, distortNormal);
+                distortNormal *= _DistortIntensity * distortIntensity * 3;
+
 
 
 

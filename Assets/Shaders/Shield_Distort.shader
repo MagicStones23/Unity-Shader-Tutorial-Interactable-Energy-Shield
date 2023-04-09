@@ -26,6 +26,8 @@
             {
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
+                float3 normal : NORMAL;
+                float4 tangent : TANGENT;
             };
 
             struct v2f
@@ -34,6 +36,9 @@
                 float2 uv : TEXCOORD0;
                 float3 worldPos : TEXCOORD1;
                 float4 screenPos : TEXCOORD2;
+                float3 worldTangent : TEXCOORD3;
+                float3 worldNormal : TEXCOORD4;
+                float3 worldBinormal : TEXCOORD5;
             };
 
             int _InteractionNumber;
