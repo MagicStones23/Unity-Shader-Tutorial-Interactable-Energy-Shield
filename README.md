@@ -1,12 +1,14 @@
 # How to use
 
-This project is create in Unity2022.2  
+This project was created in Unity2022.2  
 
 Click shield to interact  
 
 Press C to hide shield  
 
 Press O to show shield
+
+Note: Some of the texture resources in this project came from Internet, do not use them in your commercial project
 
 https://user-images.githubusercontent.com/129722386/230711633-63775944-1afd-4299-b677-65857372ddb4.mp4
 
@@ -438,7 +440,7 @@ https://user-images.githubusercontent.com/129722386/229704178-2f85ea83-99d5-4c9b
 
 https://github.com/MagicStones23/Unity-Shader-Tutorial-Interactable-Energy-Shield
 
-### Note: Some of the texture resources in this project are taken from Internet, do not use them in your commercial project
+### Note: Some of the texture resources in this project came from Internet, do not use them in your commercial project
 
 # My Social Media
 
