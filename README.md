@@ -306,7 +306,7 @@ public class ShootManager : MonoBehaviour {
 }
 ```
 
-### Then calculate it in shader
+### Then calculate distance between pixel and interaction position
 
 ```csharp
 //Properties
@@ -401,7 +401,7 @@ sampler2D _CameraOpaqueTexture;
 float4 _CameraOpaqueTexture_TexelSize;
 ```
 
-### Modify fragment function
+### Rewrite fragment function, change screen uv and sample _CameraOpaqueTexture
 
 ```csharp
 float4 frag (v2f i) : SV_Target
@@ -433,7 +433,7 @@ float4 frag (v2f i) : SV_Target
 
 https://user-images.githubusercontent.com/129722386/229704178-2f85ea83-99d5-4c9b-80a6-d97c30774edc.mp4
 
-### At this point, our energy shield has complete!
+### At this point, our energy shield has completed!
 
 
 # Source Project
